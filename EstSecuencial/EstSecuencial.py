@@ -8,3 +8,4 @@ area=((BM*bm)*h)/2
 #Datos de salida
 print("El area del Trapecio es: ",area,"m2")
 calcpromfinal
+print("El area del Trapecio es: ",area,"m2")
