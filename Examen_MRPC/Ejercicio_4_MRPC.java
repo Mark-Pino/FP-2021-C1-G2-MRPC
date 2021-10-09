@@ -8,11 +8,11 @@ public class Ejercicio_4_MRPC{
     String signo="";
     //Datos de entrada
     System.out.println("****** Operacion de 2 valores ********");
-    System.out.println("Ingrese el primer valor");
+    System.out.println("Ingrese el primer valor:");
     valor1=sc.nextDouble();
-    System.out.println("Ingrese el segundo valor");
+    System.out.println("Ingrese el segundo valor:");
     valor2=sc.nextDouble();
-    System.out.println("Ingrese cualquiera de estos signos\n+ = Suma\n- = Resta\n/ = División\n* = Multiplicación\n^ = Potencia");
+    System.out.println("Ingrese cualquiera de estos signos:\n+ = Suma\n- = Resta\n/ = División\n* = Multiplicación\n^ = Potencia");
     signo=sc.next();
     //Proceso
     if (signo.equals("+")) {

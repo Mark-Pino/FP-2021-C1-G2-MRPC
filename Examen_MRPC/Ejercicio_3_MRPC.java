@@ -8,9 +8,9 @@ public class Ejercicio_3_MRPC{
     int edad=0;
     //Datos de entrada
     System.out.println("********** Tipos de vacunas **********");
-    System.out.println("Ingrese el sexo (M/F)");
+    System.out.println("Ingrese el sexo (M/F):");
     sexo=sc.next();
-    System.out.println("Ingrese la edad");
+    System.out.println("Ingrese la edad:");
     edad=sc.nextInt();
     //Proceso
     if (edad>=70) {

@@ -15,10 +15,9 @@ public class Ejercicio_5_MRPC{
     nota2=sc.nextInt();
     System.out.println("Ingrese la nota del tercer examen:");
     nota3=sc.nextInt();
-    //Proceso
+    //Proceso y datos de salida
     if (nota1>=0 && nota1<=20 && nota2>=0 && nota2<=20 && nota3>=0 && nota3<=20){
       promedioFinal=(nota1*0.25)+(nota2*0.25)+(nota3*0.50);
-    //Datos  de salida
       System.out.println("El promedio final es: "+Math.round (promedioFinal));
     }
     else {
@@ -32,24 +31,27 @@ public class Ejercicio_5_MRPC{
     double bono=0;
     //Datos de entrada
     System.out.println("********* Bono de profesores *********");
-    System.out.println("Ingrese el salario minimo");
+    System.out.println("Ingrese el salario minimo:");
     salario=sc.nextInt();
-    System.out.println("Ingrese los puntos");
+    System.out.println("Ingrese los puntos:");
     puntos=sc.nextInt();
-    //Proceso
+    //Proceso y datos  de salida
     if (puntos>=100 && puntos<=200 && salario>0) {
       bono=salario*0.10;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>200 && puntos<=300 && salario>0) {
       bono=salario*0.40;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>300 && puntos<=400 && salario>0){
       bono=salario*0.70;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>400 && salario>0) {
       bono=salario*0.80;
+      System.out.println("Su bono es de: "+bono);
     }
-    //Datos  de salida
     else if (puntos<100 && salario<0) {
       System.out.println("No tiene el salario ni los puntos necesarios para el bono");
     }
@@ -59,7 +61,6 @@ public class Ejercicio_5_MRPC{
     else {
       System.out.println("No tiene el salario necesario para el bono ");
     }
-    System.out.println("Su bono es de: "+bono);
   }
   //Ejercicio 3
   static void tipoVacunaMRPC(){
@@ -68,9 +69,9 @@ public class Ejercicio_5_MRPC{
     int edad=0;
     //Datos de entrada
     System.out.println("********** Tipos de vacunas **********");
-    System.out.println("Ingrese el sexo (M/F)");
+    System.out.println("Ingrese el sexo (M/F):");
     sexo=sc.next();
-    System.out.println("Ingrese la edad");
+    System.out.println("Ingrese la edad:");
     edad=sc.nextInt();
     //Proceso
     if (edad>=70) {
@@ -98,11 +99,11 @@ public class Ejercicio_5_MRPC{
     String signo="";
     //Datos de entrada
     System.out.println("****** Operacion de 2 valores ********");
-    System.out.println("Ingrese el primer valor");
+    System.out.println("Ingrese el primer valor:");
     valor1=sc.nextDouble();
-    System.out.println("Ingrese el segundo valor");
+    System.out.println("Ingrese el segundo valor:");
     valor2=sc.nextDouble();
-    System.out.println("Ingrese cualquiera de estos signos\n+ = Suma\n- = Resta\n/ = División\n* = Multiplicación\n^ = Potencia");
+    System.out.println("Ingrese cualquiera de estos signos:\n+ = Suma\n- = Resta\n/ = División\n* = Multiplicación\n^ = Potencia");
     signo=sc.next();
     //Proceso
     if (signo.equals("+")) {
@@ -131,7 +132,7 @@ public class Ejercicio_5_MRPC{
     //Definir Variables
     int opcion=0;
     //Datos de entrada
-    String msg="********** Probar ejercicios *********\nEliga el algoritmo que desea probar\n1 = Ejercicio 1\n2 = Ejercicio 2\n3 = Ejercicio 3\n4 = Ejercicio 4\n0 = Salir del menu de opciones";
+    String msg="********** Probar ejercicios *********\nEliga el algoritmo que desea probar:\n1 = Ejercicio 1\n2 = Ejercicio 2\n3 = Ejercicio 3\n4 = Ejercicio 4\n0 = Salir del menu de opciones";
     System.out.println(msg);
     opcion=sc.nextInt();
     //Proceso

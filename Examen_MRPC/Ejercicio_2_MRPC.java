@@ -8,24 +8,27 @@ public class Ejercicio_2_MRPC {
     double bono=0;
     //Datos de entrada
     System.out.println("********* Bono de profesores *********");
-    System.out.println("Ingrese el salario minimo");
+    System.out.println("Ingrese el salario minimo:");
     salario=sc.nextInt();
-    System.out.println("Ingrese los puntos");
+    System.out.println("Ingrese los puntos:");
     puntos=sc.nextInt();
-    //Proceso
+    //Proceso y datos  de salida
     if (puntos>=100 && puntos<=200 && salario>0) {
       bono=salario*0.10;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>200 && puntos<=300 && salario>0) {
       bono=salario*0.40;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>300 && puntos<=400 && salario>0){
       bono=salario*0.70;
+      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>400 && salario>0) {
       bono=salario*0.80;
+      System.out.println("Su bono es de: "+bono);
     }
-    //Datos  de salida
     else if (puntos<100 && salario<0) {
       System.out.println("No tiene el salario ni los puntos necesarios para el bono");
     }
@@ -35,7 +38,6 @@ public class Ejercicio_2_MRPC {
     else {
       System.out.println("No tiene el salario necesario para el bono ");
     }
-    System.out.println("Su bono es de: "+bono);
   }
 
   public static void main(String[] args) {

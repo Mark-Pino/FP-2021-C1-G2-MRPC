@@ -14,10 +14,9 @@ public class Ejercicio_1_MRPC {
     nota2=sc.nextInt();
     System.out.println("Ingrese la nota del tercer examen:");
     nota3=sc.nextInt();
-    //Proceso
+    //Proceso y datos de salida
     if (nota1>=0 && nota1<=20 && nota2>=0 && nota2<=20 && nota3>=0 && nota3<=20){
       promedioFinal=(nota1*0.25)+(nota2*0.25)+(nota3*0.50);
-    //Datos  de salida
       System.out.println("El promedio final es: "+Math.round (promedioFinal));
     }
     else {
