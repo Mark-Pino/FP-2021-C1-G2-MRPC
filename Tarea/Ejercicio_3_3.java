@@ -2,23 +2,35 @@ import java.util.Scanner;
 public class Ejercicio_3_3 {
   static Scanner sc = new Scanner(System.in);
 
-  static void (){
-    //Definir Variables
-    int ;
-    double ;
-    //Datos de entrada
-    System.out.println("");
-    System.out.println(": ");
-    =sc.nextInt();
+  static void algoritmoRegalos(){
+    //Defe¡inir Variables
+    double monto=0;
+    String regalo="";
+    //Datos de Entrada
+    System.out.println("***** Ejercicio 3.3 ******");
+    System.out.println("Ingrese el monto que dispone:");
+    monto=sc.nextDouble();
     //Proceso
-    if (){
-      =;
+    if (monto>=1 && monto<=10.00) {
+      regalo="\n-Targeta";
     }
-    //Datos  de salida
-    System.out.println("El promedio final es: "+);
+    else if (monto>=11.00 && monto<=100.00) {
+      regalo="\n-Chocolates\n-Targeta";
+    }
+    else if (monto>=101.00 && monto<=250.00) {
+      regalo="\n-Flores\n-Chocolates\n-Targeta";
+    }
+    else if (monto>250){
+      regalo="\n-Anillo\n-Flores\n-Chocolates\n-Targeta";
+    }
+    else {
+      regalo="\nNinguno";
+    }
+    //Datos de Salida
+    System.out.println("Ud. puede elegir los siguientes: "+regalo);
   }
   
   public static void main(String[] args) {
-    ();
+    algoritmoRegalos();
   }
 }

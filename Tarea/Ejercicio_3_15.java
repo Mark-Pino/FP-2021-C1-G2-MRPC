@@ -2,23 +2,31 @@ import java.util.Scanner;
 public class Ejercicio_3_15 {
   static Scanner sc = new Scanner(System.in);
 
-  static void (){
-    //Definir Variables
-    int ;
-    double ;
-    //Datos de entrada
-    System.out.println("");
-    System.out.println(": ");
-    =sc.nextInt();
+  static void mostrarDiaLetras(){
+    //Definir variables
+    int dia=0;
+    String nombredia="";
+    //Datos de Entrada
+    System.out.println("***** Ejercicio 3.15 *****");
+    System.out.println("Ingrese un dia de la semana entre (1-7):");
+    dia=sc.nextInt();
     //Proceso
-    if (){
-      =;
+    switch(dia) {
+      case 1: nombredia="Domingo";break;
+      case 2: nombredia="Lunes";break;
+      case 3: nombredia="Martes";break;
+      case 4: nombredia="Miercoles";break;
+      case 5: nombredia="Jueves";break;
+      case 6: nombredia="Viernes";break;
+      case 7: nombredia="Sabado";break;
+      default:
+        nombredia="No existe";
     }
-    //Datos  de salida
-    System.out.println("El promedio final es: "+);
+    //Datos de Salida
+    System.out.println("El dia es: "+nombredia);
   }
   
   public static void main(String[] args) {
-    ();
+    mostrarDiaLetras();
   }
 }

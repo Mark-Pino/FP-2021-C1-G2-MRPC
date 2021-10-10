@@ -15,28 +15,28 @@ public class Ejercicio_2_MRPC {
     //Proceso y datos  de salida
     if (puntos>=100 && puntos<=200 && salario>0) {
       bono=salario*0.10;
-      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>200 && puntos<=300 && salario>0) {
       bono=salario*0.40;
-      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>300 && puntos<=400 && salario>0){
       bono=salario*0.70;
-      System.out.println("Su bono es de: "+bono);
     }
     else if (puntos>400 && salario>0) {
       bono=salario*0.80;
-      System.out.println("Su bono es de: "+bono);
     }
-    else if (puntos<100 && salario<0) {
+    //Datos de salida
+    if (puntos<100 && salario<=0) {
       System.out.println("No tiene el salario ni los puntos necesarios para el bono");
     }
     else if (puntos<100){
       System.out.println("No tiene puntos necesarios para el bono");
     }
-    else {
+    else if (salario<=0){
       System.out.println("No tiene el salario necesario para el bono ");
+    }
+    else {
+      System.out.println("Su bono es de: "+bono);
     }
   }
 
