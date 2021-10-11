@@ -8,7 +8,7 @@ public class Ejercicio_3_MRPC{
     int edad=0;
     //Datos de entrada
     System.out.println("********** Tipos de vacunas **********");
-    System.out.println("Ingrese el sexo (H/F):");
+    System.out.println("Ingrese el sexo (M/F):");
     sexo=sc.next();
     System.out.println("Ingrese la edad:");
     edad=sc.nextInt();
@@ -19,7 +19,7 @@ public class Ejercicio_3_MRPC{
     else if (edad>=16 && edad<=69 && sexo.equals("F")) {
       vacuna="B";
     }
-    else if (edad>=0 && edad<=69 && sexo.equals("H")) {
+    else if (edad>=0 && edad<=69 && sexo.equals("M")) {
       vacuna="A";
     }
     else if (edad>=0 && edad<16 && sexo.equals("F")) {
