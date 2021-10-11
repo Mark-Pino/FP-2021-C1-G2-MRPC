@@ -1,7 +1,9 @@
 import java.util.Scanner;
 public class Ejercicio_3_12 {
   static Scanner sc = new Scanner(System.in);
-
+  //Nombres y Apellidos: Mark Roger Pino Chata
+  //Codigo: 202100418
+  //Ciclo: 1 Grupo: 2
   static void sueldoSemanalTrabajador(){
     //Definir Variables
     int horaTrabajo=0, pagoHora=0;
