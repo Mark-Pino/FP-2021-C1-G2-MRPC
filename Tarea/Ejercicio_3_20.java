@@ -1,7 +1,9 @@
 import java.util.Scanner;
 public class Ejercicio_3_20 {
   static Scanner sc = new Scanner(System.in);
-
+  //Nombres y Apellidos: Mark Roger Pino Chata
+  //Codigo: 202100418
+  //Ciclo: 1 Grupo: 2
   static void fabricaPantalones(){
     //Definir Variables
     int numeroPantalones=0, costoTelaA=0, costoTelaB=0, tipoPantalon=0;

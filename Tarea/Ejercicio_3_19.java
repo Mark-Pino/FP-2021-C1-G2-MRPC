@@ -4,7 +4,7 @@ public class Ejercicio_3_19 {
   //Nombres y Apellidos: Mark Roger Pino Chata
   //Codigo: 202100418
   //Ciclo: 1 Grupo: 2
-  static void tipoVacunaMRPC(){
+  static void tipoVacuna(){
     //Definir Variables
     String sexo="", vacuna="";
     int edad=0;
@@ -35,6 +35,6 @@ public class Ejercicio_3_19 {
   }
   
   public static void main(String[] args) {
-    tipoVacunaMRPC();
+    tipoVacuna();
   }
 }

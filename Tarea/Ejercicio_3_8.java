@@ -4,16 +4,16 @@ public class Ejercicio_3_8 {
   //Nombres y Apellidos: Mark Roger Pino Chata
   //Codigo: 202100418
   //Ciclo: 1 Grupo: 2
-  static void bonoTrabajadorDMP(){
+  static void bonoTrabajador(){
     //Definir variables
     int anhoAnt;
     double sueldo, bonoAnt=0, bonoSueld=0, bonoReal=0;
     //Datos de Entrada
     System.out.print("***** Ejercicio 3.8 ******");
-    System.out.print("Ingrese anhos de antiguedad:");
-    anhoAnt=teclado.nextInt();
+    System.out.print("Ingrese años de antiguedad:");
+    anhoAnt=sc.nextInt();
     System.out.print("Ingrese el sueldo del trabajador:");
-    sueldo=teclado.nextDouble();
+    sueldo=sc.nextDouble();
     //Proceso
     if(anhoAnt>2 && anhoAnt<5){
       bonoAnt=sueldo*0.20;
@@ -35,6 +35,7 @@ public class Ejercicio_3_8 {
     //Datos de salida
     System.out.println("El trabajador tendra un bono de:"+bonoReal+ "\nSin embargo su bono por antiguedad es:  "+bonoAnt+" y el bono por sueldo es:"+bonoSueld);
   }
+  
   public static void main(String[] args) {
     bonoTrabajador();
   }

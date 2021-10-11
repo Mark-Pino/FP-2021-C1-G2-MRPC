@@ -4,7 +4,7 @@ public class Ejercicio_3_12 {
   //Nombres y Apellidos: Mark Roger Pino Chata
   //Codigo: 202100418
   //Ciclo: 1 Grupo: 2
-  static void sueldoSemanalTrabajador(){
+  static void sueldoSemanal(){
     //Definir Variables
     int horaTrabajo=0, pagoHora=0;
     double sueldoSemanal=0;
@@ -48,6 +48,6 @@ public class Ejercicio_3_12 {
   }
   
   public static void main(String[] args) {
-    sueldoSemanalTrabajador();
+    sueldoSemanal();
   }
 }
