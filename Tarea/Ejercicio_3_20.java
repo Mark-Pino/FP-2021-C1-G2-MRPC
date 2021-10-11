@@ -7,15 +7,15 @@ public class Ejercicio_3_20 {
     int ;
     double ;
     //Datos de entrada
-    System.out.println("");
-    System.out.println(": ");
+    System.out.println("***** Ejercicio 3.20 *****");
+    System.out.println(":");
     =sc.nextInt();
     //Proceso
     if (){
       =;
     }
     //Datos  de salida
-    System.out.println("El promedio final es: "+);
+    System.out.println(": "+);
   }
   
   public static void main(String[] args) {

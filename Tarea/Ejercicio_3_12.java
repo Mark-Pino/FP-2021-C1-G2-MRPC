@@ -12,27 +12,40 @@ public class Ejercicio_3_12 {
     horaTrabajo=sc.nextInt();
     System.out.println("Ingrese el pago por hora:");
     pagoHora=sc.nextInt();
-    //Proceso y Datos de salida
+    //Proceso
     if (horaTrabajo>0 && horaTrabajo<=40 && pagoHora>0){
       sueldoSemanal=(pagoHora*horaTrabajo);
-      System.out.println("El sueldo semanal es: "+sueldoSemanal);
     }
-    else if (horaTrabajo>=0 && horaTrabajo<=40 && pagoHora>0) {
-      sueldoSemanal=pagoHora*horaTrabajo;
-      System.out.println("El sueldo semanal es: "+sueldoSemanal);
+    else if (horaTrabajo>=41 && horaTrabajo<=45 && pagoHora>0) {
+      sueldoSemanal=(pagoHora*horaTrabajo)*2;
     }
-    else if (horaTrabajo<0 && pagoHora<0) {
+    else if (horaTrabajo>=46 && horaTrabajo<=50 && pagoHora>0) {
+      sueldoSemanal=(pagoHora*horaTrabajo)*3;
+    }
+    //Datos de salida
+    if (horaTrabajo==50 && pagoHora>0) {
+      System.out.println("Ya no puede trabajar mas");
+    }
+    if (horaTrabajo>50 && pagoHora>0) {
+      System.out.println("No puede trabajar mas de 50 horas solo se contara las 50 horas");
+      sueldoSemanal=(pagoHora*50)*3;
+      System.out.println("Su sueldo semanal es de: "+sueldoSemanal);
+    }
+    else if (horaTrabajo<=0 && pagoHora<=0) {
       System.out.println("No cuenta con pago ni con horas!");
     }
-    else if (horaTrabajo<0) {
+    else if (horaTrabajo<=0) {
       System.out.println("No tiene horas de trabajo!");
     }
+    else if (pagoHora<=0) {
+      System.out.println("No tiene pago por hora!");
+    }
     else {
-      System.out.println("No tiene pago por horas!");
+      System.out.println("Su sueldo semanal es de: "+sueldoSemanal);
     }
   }
   
   public static void main(String[] args) {
-    ();
+    sueldoSemanalTrabajador();
   }
 }
