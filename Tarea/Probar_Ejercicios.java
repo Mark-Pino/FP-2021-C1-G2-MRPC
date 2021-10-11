@@ -219,13 +219,13 @@ public class Probar_Ejercicios {
   //3.8
   static void bonoTrabajador(){
     //Definir variables
-    int anhoAnt;
+    int anhoAnt=0;
     double sueldo, bonoAnt=0, bonoSueld=0, bonoReal=0;
     //Datos de Entrada
-    System.out.print("***** Ejercicio 3.8 ******");
-    System.out.print("Ingrese años de antiguedad:");
+    System.out.println("***** Ejercicio 3.8 ******");
+    System.out.println("Ingrese años de antiguedad:");
     anhoAnt=sc.nextInt();
-    System.out.print("Ingrese el sueldo del trabajador:");
+    System.out.println("Ingrese el sueldo del trabajador:");
     sueldo=sc.nextDouble();
     //Proceso
     if(anhoAnt>2 && anhoAnt<5){
@@ -590,7 +590,7 @@ public class Probar_Ejercicios {
     int edad=0;
     //Datos de entrada
     System.out.println("***** Ejercicio 3.19 *****");
-    System.out.println("Ingrese el sexo (H/F):");
+    System.out.println("Ingrese el sexo (M/F):");
     sexo=sc.next();
     System.out.println("Ingrese la edad:");
     edad=sc.nextInt();
@@ -601,7 +601,7 @@ public class Probar_Ejercicios {
     else if (edad>=16 && edad<=69 && sexo.equals("F")) {
       vacuna="B";
     }
-    else if (edad>=0 && edad<=69 && sexo.equals("H")) {
+    else if (edad>=0 && edad<=69 && sexo.equals("M")) {
       vacuna="A";
     }
     else if (edad>=0 && edad<16 && sexo.equals("F")) {

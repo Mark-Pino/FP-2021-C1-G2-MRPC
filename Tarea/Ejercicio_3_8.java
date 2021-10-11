@@ -6,13 +6,14 @@ public class Ejercicio_3_8 {
   //Ciclo: 1 Grupo: 2
   static void bonoTrabajador(){
     //Definir variables
-    int anhoAnt;
+    int anhoAnt=0;
     double sueldo, bonoAnt=0, bonoSueld=0, bonoReal=0;
     //Datos de Entrada
-    System.out.print("***** Ejercicio 3.8 ******");
-    System.out.print("Ingrese años de antiguedad:");
+    System.out.println("***** Ejercicio 3.8 ******");
+    
+    System.out.println("Ingrese años de antiguedad:");
     anhoAnt=sc.nextInt();
-    System.out.print("Ingrese el sueldo del trabajador:");
+    System.out.println("Ingrese el sueldo del trabajador:");
     sueldo=sc.nextDouble();
     //Proceso
     if(anhoAnt>2 && anhoAnt<5){
