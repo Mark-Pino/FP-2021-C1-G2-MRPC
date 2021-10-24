@@ -41,10 +41,17 @@ public class App {
         System.out.println(ologxx);
         int ologxxx=!(a>b || a==b)?1:0;
         System.out.println(ologxxx);
+        //Operadores relacionales
+        System.out.println((a>b)?"verdadero":"falso");
+        System.out.println((a>=b)?"verdadero":"falso");
+        System.out.println((a<b)?"verdadero":"falso");
+        System.out.println((a<=b)?"verdadero":"falso");
+        System.out.println((a==b)?"verdadero":"falso");
+        System.out.println((a!=b)?"verdadero":"falso");
     }
 
     public static void controlStructura() {
-        
+        //
     }
     
 
