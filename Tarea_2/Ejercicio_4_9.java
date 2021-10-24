@@ -8,7 +8,7 @@ public class Ejercicio_4_9 {
     int cantaños=0, contador=1;
     //datos de entrada
     System.out.println("***** Ejercicio 4.9 ******");
-    System.out.println("Ingrese cuantos años ingreso dinero:");
+    System.out.println("Ingrese los años que puso dinero:");
     cantaños=sc.nextInt();
     //Proceso y datos de salida
     while (contador<=cantaños) {

@@ -5,7 +5,8 @@ public class Ejercicio_4_2 {
   static void hamburguesas() {
     //Definir Variables
     int cantidadHam; 
-    double costoFinal=0; String pagoTarjeta;
+    double costoFinal=0;
+    String pagoTarjeta;
     //Datos de Entrada
     System.out.println("***** Ejercicio 4.2 ******");
     //Proceso
