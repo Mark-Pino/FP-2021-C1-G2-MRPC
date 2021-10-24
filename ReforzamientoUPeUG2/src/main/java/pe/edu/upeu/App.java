@@ -21,18 +21,27 @@ public class App {
         Integer xx;
         Double xxx;
         Date ss;
-        
+
     }
 
     public static void operadores() {
-        
+        int a=7, b=2;
+        //Operadores
+        System.out.println("suma: "+(a+b));
+        System.out.println("resta: "+(a-b));
+        System.out.println("division: "+(a/b));
+        System.out.println("multiplicacion: "+(a*b));
+        System.out.println("modulo: "+(a%b));
+        System.out.println("Potencia:"+(Math.pow(a, b)));
     }
 
     public static void controlStructura() {
         
     }
+    
 
     public static void main( String[] args ) {
         System.out.println( "Hello World!" );
+        operadores();
     }
 }
