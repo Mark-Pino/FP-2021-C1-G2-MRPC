@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Ejercicio_4_9 {
   static Scanner sc=new Scanner(System.in);
 
-  public static void deposito() {
+  static void deposito() {
     //definir variables
     double cantidad=0;
     int cantaños=0, contador=1;

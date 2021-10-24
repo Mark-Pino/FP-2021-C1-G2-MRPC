@@ -140,39 +140,38 @@ public class Ejercicio_4_1 {
     }
   }
   //7
-  public static void hamburguesasMenu() {
-   //definir variables
-   int opciones=1;
-   String tarjeta;
-   double montoT=0;
-   //datos de entrada
-   System.out.println("***** Ejercicio 4.7 ******");
-   System.out.print("Escoja su hamburguesa");
-   String hams="\n1=Hambuguesa sencilla\n2=Hamburguesa doble\n3=Hamburguesa triple\n0=Salir";
-   System.out.println(hams);
-   int opciones=sc.nextInt(); 
-   //proceso        
-   do {
-     switch (opciones) {
-       case 1:montoT=montoT+(20); break;
-       case 2:montoT=montoT+(25); break;
-       case 3:montoT=montoT+(28); break;
-       default:System.out.println("Opcion no existe"); break;
-   }
-   if (opciones!=0){
-     System.out.println("¿Desea otra haburguesa? "+hams);
-     opciones=sc.nextInt();
-   }
-   //opciones++;
-   }
-   while (opciones!=0);
-   System.out.println("¿Desea pagar con tarjeta (S/N)?");
-   tarjeta=sc.next();
-   if (tarjeta.equals("S")) {
-     montoT=montoT+(montoT*0.05);
-   }
-   //datos de salida
-   System.out.println("El costo final es: "+montoT);
+  static void hamburguesasMenu() {
+    //definir variables
+    int opciones=1;
+    String tarjeta;
+    double montoT=0;
+    //datos de entrada
+    System.out.println("***** Ejercicio 4.7 ******");
+    System.out.print("Escoja su hamburguesa");
+    String hams="\n1=Hambuguesa sencilla\n2=Hamburguesa doble\n3=Hamburguesa triple\n0=Salir";
+    System.out.println(hams);
+    int opciones=sc.nextInt(); 
+    //proceso
+    do {
+      switch (opciones) {
+        case 1:montoT=montoT+(20); break;
+        case 2:montoT=montoT+(25); break;
+        case 3:montoT=montoT+(28); break;
+        default:System.out.println("Opcion no existe"); break;
+      }
+      if (opciones!=0){
+        System.out.println("¿Desea otra haburguesa? "+hams);
+        opciones=sc.nextInt();
+      }
+    }
+    while (opciones!=0);
+    System.out.println("¿Desea pagar con tarjeta (S/N)?");
+    tarjeta=sc.next();
+    if (tarjeta.equals("S")) {
+      montoT=montoT+(montoT*0.05);
+    }
+    //datos de salida
+    System.out.println("El costo final es: "+montoT);
   }
   //8
   static void articulos() {
@@ -192,7 +191,7 @@ public class Ejercicio_4_1 {
     System.out.println("El descuento que recivira es: "+descuento);
   }
   //9
-  public static void deposito() {
+  static void deposito() {
     //definir variables
     double cantidad=0;
     int cantaños=0, contador=1;

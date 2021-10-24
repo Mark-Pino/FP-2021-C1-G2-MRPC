@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Ejercicio_4_7 {
   static Scanner sc=new Scanner(System.in);
 
-  public static void hamburguesasMenu() {
+  static void hamburguesasMenu() {
    //definir variables
    int opciones=1;
    String tarjeta;
