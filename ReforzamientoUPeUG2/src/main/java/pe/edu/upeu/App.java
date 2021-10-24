@@ -61,12 +61,57 @@ public class App {
     }
 
     public static void controlStructura() {
-        //
+        //Estructuras secuenciales
+        //Calcular el area de un triangulo
+        int b=4, h=2;
+        System.out.println((b*h)/2);
+        //Estructuras condicionales
+        if (b>h) { //condicional simple
+            System.out.println("B es Mayor");
+        }
+
+        if (b>h) { //condicional compuesta/bifurcada
+            System.out.println("B es Mayor");
+        }else{
+            System.out.println("h es menor");
+        }
+
+        if (b>h) { //condicional compuesta anidada
+            System.out.println("B es Mayor");
+        }else if (b==h) {
+            System.out.println("Ambos son iguales");
+        }else{
+            System.out.println("B es menor");
+        }
+        //Estructuras Condiciaonal Multiple
+        int opcion=0;
+        switch (opcion) {
+            case 1: System.out.println("uno"); break;
+            case 2: System.out.println("dos"); break;
+            case 3: System.out.println("tres"); break;
+            case 4: System.out.println("cuatro"); break;
+            default: System.out.println("no existe"); break;
+        }
+        //Estructuras repititivas
+        //while
+        while (opcion==0) {
+            System.out.println("Realizar operaciones");
+            opcion++;
+        }
+        //for
+        for (int i = -1; i < opcion; i++) {
+            System.out.println("Realizar operaciones");
+        }
+        //do while
+        do {
+            System.out.println("Realizar operaciones");
+            opcion++;
+        } while (opcion==0);
     }
-    
 
     public static void main( String[] args ) {
         System.out.println( "Hello World!" );
-        operadores();
+        //operadores();
+        controlStructura();
     }
 }
