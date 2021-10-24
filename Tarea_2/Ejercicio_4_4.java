@@ -6,7 +6,8 @@ public class Ejercicio_4_4 {
     //Definir Variables
     int color, focos_blancos=0, focos_rojos=0, focos_verdes=0, i, n;
     //Datos de Entrada
-    System.out.println("Ingresa el numero de lotes de focos: ");
+    System.out.println("***** Ejercicio 4.4 ******");
+    System.out.println("Ingresa el numero de lotes de focos:");
     n=sc.nextInt();
     //Proceso
     for (i=1; i<=n; i++) {
