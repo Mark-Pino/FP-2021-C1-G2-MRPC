@@ -30,13 +30,37 @@ public long leer(long valor, String msg){
   return valor;
 }
 
-public char leer(char valor, String msg){  
-
-return ' ';
+public double leer(double valor, String msg){  
+  System.out.print(msg+": ");
+  try{
+    valor=Double.parseDouble(br.readLine());
+  }catch(Exception e){
+    valor=leer(valor, msg);
+  }
+  System.out.println();
+  return valor;
 }
-public String leer(String valor, String msg){  
 
-return "";
+public char leer(char valor, String msg){ 
+  System.out.print(msg+": ");
+  try{//David Mamani
+    valor=br.readLine().charAt(0);//
+  }catch(Exception e){
+    valor=leer(valor, msg);
+  }
+  System.out.println();
+  return valor;
+}
+
+public String leer(String valor, String msg){  
+  System.out.print(msg+": ");
+  try{//David Mamani
+    valor=br.readLine();//
+  }catch(Exception e){
+    valor=leer(valor, msg);
+  }
+  System.out.println();
+  return valor;
 }
 
 }

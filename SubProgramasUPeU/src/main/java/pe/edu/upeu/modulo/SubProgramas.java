@@ -1,20 +1,19 @@
 package pe.edu.upeu.modulo;
-import java.util.Scanner;
-public class SubProgramas {
-//variables
 
-  public String nombre="dario";
+
+public class SubProgramas{
+  
+  public String nombre="Dario";
   private String dni="";
-  static Scanner sc = new Scanner(System.in);
 
-  public void saludo() {
+
+
+  public void saludo(){
     System.out.println("Hola "+nombre);
   }
 
-  public void otroSaludo() {
-
+  public void otroSaludo(){    
     String apellidos="Perez";
-
-    System.out.println("Hola "+nombre+apellidos);
+    System.out.println("Hola "+nombre+" "+apellidos);
   }
 }

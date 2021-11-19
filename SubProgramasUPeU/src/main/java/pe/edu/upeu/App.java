@@ -21,9 +21,7 @@ static void menuOpciones(){
     +"\n3=Fibonaci no recursivo"
     ;
 
-
-    System.out.println(msg);
-    opcion=sc.nextInt();
+    opcion=lt.leer(0,msg);
     while(opcion!=0){
         switch(opcion){
             case 1:
@@ -36,9 +34,8 @@ static void menuOpciones(){
             break;            
 
             default: System.out.println("Opcion no existe!");
-        }
-      System.out.println(msg);
-      opcion=sc.nextInt();    
+        }        
+      opcion=lt.leer(0,msg);
     }
   }    
 
