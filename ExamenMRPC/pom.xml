@@ -4,7 +4,7 @@
   <groupId>upeu.edu.pe</groupId>
   <artifactId>ExamenMRPC</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>v1.0</version>
   <name>ExamenMRPC</name>
   <url>http://maven.apache.org</url>
 
@@ -33,7 +33,7 @@
     <configuration>
     <archive>
     <manifest>
-    <mainClass>pe.edu.upeu.App</mainClass>
+    <mainClass>pe.edu.upeu.mrpc.App</mainClass>
     </manifest>
     </archive>
     </configuration>
