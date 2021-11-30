@@ -10,6 +10,7 @@ import java.util.List;
 public class LeerArchivo {
 
     public static Path CAMINO;
+    
     public LeerArchivo(String name) {
         String ruta=crearCarpetaRaiz("data").getAbsolutePath();
         CAMINO = Paths.get(ruta+"/"+name);
