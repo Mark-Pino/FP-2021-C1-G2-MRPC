@@ -1,7 +1,9 @@
 package pe.edu.upeu.modelo;
-import lombok.Data;
 
-@Data
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter @Getter
 public class ProductoTO {
     public String idProducto;
     public String nombre;

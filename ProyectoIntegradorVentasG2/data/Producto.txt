@@ -1,0 +1,2 @@
+P1	Zapatilla nike Mujer T30	30	Mujer	Zapatilla	P1	212.0	10	M1	10.0
+P2	Zapatilla Varon T30	30	Varon	Zapatilla	P3	212.0	10	Unidad	10.0
