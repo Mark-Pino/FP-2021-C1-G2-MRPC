@@ -8,7 +8,7 @@ public class LeerTeclado {
     BufferedReader br =new BufferedReader(new InputStreamReader(System.in));   
     
     public int leer(int valor, String msg) {
-        System.out.println(msg+": ");
+        System.out.println(msg+" ");
         try {
             valor=Integer.parseInt(br.readLine());
         }
@@ -20,7 +20,7 @@ public class LeerTeclado {
     }
 
     public long leer(long valor, String msg){  
-        System.out.print(msg+": ");
+        System.out.print(msg+" ");
         try{
           valor=Long.parseLong(br.readLine());
         }
@@ -31,7 +31,7 @@ public class LeerTeclado {
         return valor;
     }
     public double leer(double valor, String msg) {
-        System.out.println(msg+": ");
+        System.out.println(msg+" ");
         try {
             valor=Double.parseDouble(br.readLine());
         }
@@ -44,7 +44,7 @@ public class LeerTeclado {
 
     
     public char leer(char valor, String msg) {
-        System.out.println(msg+": ");
+        System.out.println(msg+" ");
         try {//Mark Pino
             valor=br.readLine().charAt(0);
         }
@@ -57,7 +57,7 @@ public class LeerTeclado {
 
     
     public String leer(String valor, String msg) {
-        System.out.println(msg+": ");
+        System.out.println(msg+" ");
         try {
             valor=br.readLine();
         }
@@ -70,7 +70,7 @@ public class LeerTeclado {
     }
 
     public boolean leer(boolean valor, String msg) {
-        System.out.println(msg+": ");
+        System.out.println(msg+" ");
         try {
             valor=Boolean.parseBoolean(br.readLine());
         }

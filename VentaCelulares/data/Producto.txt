@@ -1,0 +1,6 @@
+P1	Samsung Galaxy A10	M1	589.0	unidad	10.0	123456789
+P2	Samsung Galaxy A50	M1	1313.0	unidad	5.0	234567891
+P3	Apple IPhone XR	M3	2200.0	unidad	7.0	345678912
+P4	OPPO A5s	M4	1050.0	unidad	5.0	456789123
+P5	Xiaomi Redmi 7a	M2	510.0	unidad	8.0	567891234
+P6	Huawei P30	M6	749.0	unidad	7.0	678912345

@@ -1,24 +1,24 @@
 package pe.edu.upeu.app;
 
 
-//import pe.edu.upeu.dao.MarcaDao;
-//import pe.edu.upeu.dao.ProductoDao;
-//import pe.edu.upeu.dao.UsuarioDao;
-//import pe.edu.upeu.dao.VentasDao;
+import pe.edu.upeu.dao.MarcaDao;
+import pe.edu.upeu.dao.ProductoDao;
+import pe.edu.upeu.dao.UsuarioDao;
+import pe.edu.upeu.dao.VentasDao;
 import pe.edu.upeu.util.LeerTeclado;
 import pe.edu.upeu.util.UtilsX;
 
 public class MenuPrincipal {
     LeerTeclado leer=new LeerTeclado();
-    /*UsuarioDao userDao;
+    UsuarioDao userDao;
     MarcaDao marDao;
     ProductoDao proDao;
-    VentasDao ventasDao;*/
+    VentasDao ventasDao;
     UtilsX util=new UtilsX();
 
 
     public void mainLogin() {
-        /*util.clearConsole();
+        util.clearConsole();
         System.out.println("**********************System Autenticate*********************");
         System.out.println();
         userDao=new UsuarioDao();
@@ -27,7 +27,7 @@ public class MenuPrincipal {
         }else{            
             System.out.println("Intente Nuevamemnte");
             mainLogin();
-        }*/
+        }
     }
 
 
@@ -46,11 +46,10 @@ public class MenuPrincipal {
         opcion=leer.leer(0,msg);
         while(opcion!=0){
             switch(opcion){
-                /*case 11:{ 
+                case 11:{ 
                     userDao=new UsuarioDao();
                     userDao.registrarNuevoUsuario();
-                 }
-                break;
+                } break;
                 case 12:{
                     userDao=new UsuarioDao();
                     userDao.listarUsuarios();
@@ -78,7 +77,7 @@ public class MenuPrincipal {
                 case 50:{
                     ventasDao=new VentasDao();
                     ventasDao.registroVenta();
-                } break;*/                                                               
+                } break;                                                        
                 default: System.out.println("Opcion no existe!");
             }        
           opcion=leer.leer(0,msg);

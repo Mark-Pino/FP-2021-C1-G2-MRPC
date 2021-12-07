@@ -1,0 +1,6 @@
+M1	Samsung
+M2	Xiaomi
+M3	Apple
+M4	OPPO
+M5	LG
+M6	Huawei
