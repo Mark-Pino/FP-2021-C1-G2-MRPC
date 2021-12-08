@@ -45,7 +45,7 @@ public class VentasDao extends AppCrud {
             String opcion="SI";
             do {                
                 VentaDetalleTO vdXTo=crearCarritoVenta(ventaTO);
-                importeTotalX+=vdXTo.getTotalPago();
+                importeTotalX+=vdXTo.getPrecioUnit();
                 opcion=leerTecla.leer("", "Desea agregar productos a carrito de ventas");
             } while (opcion.toUpperCase().equals("SI"));
             subtotalX=(importeTotalX*100)/118;
@@ -86,13 +86,10 @@ public class VentasDao extends AppCrud {
         vdTO.setIdProducto(leerTecla.leer("", "Ingrese Id del Producto a vender"));        
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
         Object[][] dataP= buscarContenido(leerArch, 0, vdTO.getIdProducto());
-        double precioP=Double.parseDouble(String.valueOf(dataP[0][6]))+
-        Double.parseDouble(String.valueOf(dataP[0][9]));
-        //vdTO.setPrecioUnit(precioP);
-        //vdTO.setCantidad(leerTecla.leer(0, "Ingrese cantidad a vender"));
-        //vdTO.setDescuento(0);
-        //vdTO.setTotalpago((vdTO.getPrecioUnit()*vdTO.getCantidad())-vdTO.getDescuento());
-
+        double precioP=Double.parseDouble(String.valueOf(dataP[0][3]));
+        String IMEIX=dataP[0][6].toString();
+        vdTO.setPrecioUnit(precioP);
+        vdTO.setCodigoIMEI(IMEIX);
         leerArch=new LeerArchivo(TABLE_DETALLE_VENTA);
         agregarContenido(leerArch, vdTO);
         return vdTO;

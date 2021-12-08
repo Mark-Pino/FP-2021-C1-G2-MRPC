@@ -7,8 +7,6 @@ public class VentaDetalleTO {
     public String IdVentaDetalle;
     public String IdVenta;
     public String IdProducto;
-    public String precioUnit;
-    //public double monto;
-    public double descuento;
-    public double totalPago;
+    public double precioUnit;
+    public String CodigoIMEI;
 }
