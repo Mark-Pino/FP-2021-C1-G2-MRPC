@@ -16,10 +16,9 @@ public class MenuPrincipal {
     VentasDao ventasDao;
     UtilsX util=new UtilsX();
 
-
     public void mainLogin() {
         util.clearConsole();
-        System.out.println("**********************System Autenticate*********************");
+        System.out.println("********************** System Autenticate *********************");
         System.out.println();
         userDao=new UsuarioDao();
         if(userDao.login()){
@@ -30,10 +29,9 @@ public class MenuPrincipal {
         }
     }
 
-
     public void menuMain() {
         int opcion=0;
-        System.out.println("================Bienvenidos al Sistema============");
+        System.out.println("================ Bienvenidos al Sistema ============");
         String msg="Seleccione una opción"+
         "\n11=Nuevo Usuario"    
         +"\n12=Listar Usuario"
@@ -42,7 +40,8 @@ public class MenuPrincipal {
         +"\n42=Listar Producto"    
         +"\n43=Actualizar Producto"
         +"\n44=Eliminar Producto"
-        +"\n50=Registrar Ventas";        
+        +"\n50=Registrar Ventas"
+        +"\n51=Reporte Venta";        
         opcion=leer.leer(0,msg);
         while(opcion!=0){
             switch(opcion){
@@ -77,7 +76,11 @@ public class MenuPrincipal {
                 case 50:{
                     ventasDao=new VentasDao();
                     ventasDao.registroVenta();
-                } break;                                                        
+                } break;
+                case 51:{
+                    ventasDao=new VentasDao();
+                    ventasDao.ReporteVentasRangoFecha();
+                } break;                                                           
                 default: System.out.println("Opcion no existe!");
             }        
           opcion=leer.leer(0,msg);

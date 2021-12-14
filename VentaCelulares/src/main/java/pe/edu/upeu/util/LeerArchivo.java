@@ -8,9 +8,8 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class LeerArchivo {
-    
-    public static Path CAMINO;  
-    
+    public static Path CAMINO;
+
     public LeerArchivo(String name) {
         String ruta=crearCarpetaRaiz("data").getAbsolutePath();
         CAMINO = Paths.get(ruta+"/"+name);
@@ -25,7 +24,6 @@ public class LeerArchivo {
         return newFolder;
     }
     
-    
 	public void crear()  {
         try {
             if(!CAMINO.toFile().exists() && !CAMINO.toFile().isFile()){
@@ -35,7 +33,6 @@ public class LeerArchivo {
             e.getMessage();
         }          		
 	}
-
 	
 	public void escribir(List lista) throws IOException {		
             if(CAMINO.toFile().exists() && CAMINO.toFile().isFile()){
@@ -44,7 +41,6 @@ public class LeerArchivo {
                 crear();
             }                
 	}
-
 	
 	public List leer() throws IOException {	    
             if(CAMINO.toFile().exists() && CAMINO.toFile().isFile()){

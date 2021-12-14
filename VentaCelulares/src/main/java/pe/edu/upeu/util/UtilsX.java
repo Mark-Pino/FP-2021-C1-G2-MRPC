@@ -3,7 +3,6 @@ package pe.edu.upeu.util;
 import java.net.URL;
 
 public class UtilsX {
-
     public int fibonaciRecur(final int numero) {
         if (numero < 2) {
         return numero;

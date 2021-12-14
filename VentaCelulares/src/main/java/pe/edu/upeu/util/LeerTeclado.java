@@ -30,6 +30,7 @@ public class LeerTeclado {
         System.out.println();
         return valor;
     }
+
     public double leer(double valor, String msg) {
         System.out.println(msg+" ");
         try {
@@ -41,7 +42,6 @@ public class LeerTeclado {
         System.out.println();
         return valor;    
     }
-
     
     public char leer(char valor, String msg) {
         System.out.println(msg+" ");
@@ -55,7 +55,6 @@ public class LeerTeclado {
         return valor;    
     }
 
-    
     public String leer(String valor, String msg) {
         System.out.println(msg+" ");
         try {
