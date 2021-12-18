@@ -13,6 +13,9 @@ import pe.edu.upeu.util.LeerArchivo;
 import pe.edu.upeu.util.LeerTeclado;
 import pe.edu.upeu.util.UtilsX;
 
+import org.fusesource.jansi.Ansi;
+import org.fusesource.jansi.AnsiConsole;
+
 public class VentasDao extends AppCrud {
     LeerTeclado leerTecla=new LeerTeclado();
     UtilsX util=new UtilsX();
@@ -34,8 +37,8 @@ public class VentasDao extends AppCrud {
 
     public void registroVenta() {
         
-        System.out.println("******************* Venta de Celulares ***************");
-        String dni=crearCliente(leerTecla.leer("", "Ingrese el DNI del Cliente"));
+        System.out.println("******************* Venta de Celulares ***************");//color
+        String dni=crearCliente(leerTecla.leer("", "Ingrese el DNI del Cliente:"));//color
         double igvX=0;
         double subtotalX=0;
         double importeTotalX=0;
@@ -46,7 +49,7 @@ public class VentasDao extends AppCrud {
             do {                
                 VentaDetalleTO vdXTo=crearCarritoVenta(ventaTO);
                 importeTotalX+=vdXTo.getPrecioUnit();
-                opcion=leerTecla.leer("", "Desea agregar productos a carrito de ventas");
+                opcion=leerTecla.leer("", "Desea agregar mas productos al carrito de ventas? (SI/NO):");//color
             } while (opcion.toUpperCase().equals("SI"));
             subtotalX=(importeTotalX*100)/118;
             igvX=subtotalX*0.18;
@@ -57,7 +60,6 @@ public class VentasDao extends AppCrud {
             ventaTO.setImporteTotal(importeTotalX);
             editarRegistro(leerArch, 0, ventTO.getIdVenta(), ventaTO);
         }
-        
     }
 
     public VentaTO crearVenta(String dni) {
@@ -71,19 +73,19 @@ public class VentasDao extends AppCrud {
         ventTO.setImporteTotal(0);
         ventTO.setSubTotal(0);
         leerArch=new LeerArchivo(TABLE_VENTA);
-        agregarContenido(leerArch, ventTO);       
+        agregarContenido(leerArch, ventTO);
         return ventTO;
     }
     
     public VentaDetalleTO crearCarritoVenta(VentaTO vto) {
         util.clearConsole();
-        System.out.println("====================Carrito de Ventas=====================");
+        System.out.println("==================== Carrito de Ventas =====================");//color
         mostrarProducto();
         leerArch=new LeerArchivo(TABLE_DETALLE_VENTA);
         vdTO=new VentaDetalleTO();
         vdTO.setIdVentaDetalle(generarId(leerArch, 0, "VD", 2));
         vdTO.setIdVenta(vto.getIdVenta());
-        vdTO.setIdProducto(leerTecla.leer("", "Ingrese Id del Producto a vender"));        
+        vdTO.setIdProducto(leerTecla.leer("", "Ingrese el Id del Producto a vender:"));//color   
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
         Object[][] dataP= buscarContenido(leerArch, 0, vdTO.getIdProducto());
         double precioP=Double.parseDouble(String.valueOf(dataP[0][3]));
@@ -102,7 +104,7 @@ public class VentasDao extends AppCrud {
             System.out.print(dataPro[i][0]+"="+dataPro[i][1]+
             " (Precio:"+(
             Double.parseDouble(String.valueOf(dataPro[i][3])) + 
-            Double.parseDouble(String.valueOf(dataPro[i][5])))+"\t ! " );
+            Double.parseDouble(String.valueOf(dataPro[i][5])))+"\t ! " );//color
        }
        System.out.println("\n");
     }   
@@ -116,7 +118,7 @@ public class VentasDao extends AppCrud {
             leerArch=new LeerArchivo(TABLE_CLIENTE);
             cliTO=new ClienteTO();
             cliTO.setDni(dni);
-            cliTO.setNombre(leerTecla.leer("", "Ingrese nombre cliente"));
+            cliTO.setNombre(leerTecla.leer("", "Ingrese el nombre del cliente:"));//color
             agregarContenido(leerArch, cliTO);
             return cliTO.getDni();
         }       
@@ -126,8 +128,8 @@ public class VentasDao extends AppCrud {
         util.clearConsole();
         leerArch=new LeerArchivo(TABLE_VENTA);
         Object[][] datPrev= listarContenido(leerArch);
-        String fechaInit=leerTecla.leer("", "Ingrese Fecha Inicio");
-        String fechaFinal=leerTecla.leer("", "Ingrese Fecha Fin");
+        String fechaInit=leerTecla.leer("", "Ingrese la fecha de inicio:");//color
+        String fechaFinal=leerTecla.leer("", "Ingrese la fecha del final:");//color
         int cantidadFilas=0;
         try { //Leer ventas y saber cuantos coinciden eon el rango de fechas
             for (int i = 0; i < datPrev.length; i++) {
@@ -161,14 +163,16 @@ public class VentasDao extends AppCrud {
                     dataVentas[indiceVentorV]=vtOX;
                     indiceVentorV++;
                 }
-            }             
+            }
+            AnsiConsole.systemInstall();  
+            Ansi color=new Ansi();            
             //Imprimir Reporte
-            System.out.println("============================ Reporte Ventas0 ==========================");
-            System.out.println("************Fecha Inicio:"+fechaInit+" a Fecha Fin:"+fechaFinal+"*********");
-            util.pintarLine('H', 40);
-            util.pintarTextHeadBody('H', 3, "ID,DNI,Fech.Venta,SubTotal, IGV, Imp. Total");
+            System.out.println(color.render("@|blue ================================ Reporte Ventas ===============================|@"));//color
+            System.out.println("***************** Fecha Inicio:"+fechaInit+" a Fecha Fin:"+fechaFinal+" **************");//color
+            util.pintarLine('H', 39);
+            util.pintarTextHeadBody('H', 3, "ID,DNI,Fech.Venta,SubTotal, IGV, Imp. Total");//color
             System.out.println();
-            util.pintarLine('H', 40);
+            util.pintarLine('H', 39);
             double subtotX=0, igvX=0, impTotX=0;
             for (VentaTO xx : dataVentas) {
                 String dataXX=xx.getIdVenta()+","+xx.getDni()+","+xx.getFecha()
@@ -178,14 +182,15 @@ public class VentasDao extends AppCrud {
                 impTotX+=xx.getImporteTotal();
                 util.pintarTextHeadBody('B',3,dataXX);
             }  //Math.round(double*100.0)/100.0
-            util.pintarLine('H', 40);
-            System.out.println("  Sub. Total: S/."+ (Math.round(subtotX*100.0)/100.0)+
-            "  |  IGV: S/."+(Math.round(igvX*100.0)/100.0)+
-            "   | Imp. Total: S/. "+(Math.round(impTotX*100.0)/100.0));
-            util.pintarLine('H', 40);
-
+            util.pintarLine('H', 39);
+            color=new Ansi();   
+            //System.out.println(color.render("@|blue Holasss |@ @|green VErsdsd |@  "));       
+            System.out.println(color.render("      @|red Sub. Total: S/.|@ @|green "+ (Math.round(subtotX*100.0)/100.0)+
+            "|@ | @|blue IGV: S/.|@ @|green "+(Math.round(igvX*100.0)/100.0)+
+            "|@ |  @|blue Imp. Total: S/. |@ @|green "+(Math.round(impTotX*100.0)/100.0)+"|@"));//color
+            util.pintarLine('H', 39);
         } catch (Exception e) {
-            System.err.println("Error al reportar ventas : "+e.getMessage());
+            System.err.println("Error al reportar ventas: "+e.getMessage());//color
         }
     }
 }

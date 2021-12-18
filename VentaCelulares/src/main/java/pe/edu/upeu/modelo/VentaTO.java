@@ -11,5 +11,4 @@ public class VentaTO {
     public double igv;
     public double ImporteTotal;
     public String usuario;
-    public double descuento;
 }

@@ -18,11 +18,12 @@ public class UsuarioDao extends AppCrud {
     
     public void registrarNuevoUsuario() {    
         userTO=new UsuarioTO();
-        userTO.setUsuario(leerTecla.leer("", "Ingrese un usuario"));
-        userTO.setPassword(leerTecla.leer("", "Ingrese una contraseña"));
-        userTO.setPerfil(leerTecla.leer("", "Ingrese un perfil (VENDEDOR/ADMINISTRADOR)"));
+        userTO.setUsuario(leerTecla.leer("", "Ingrese el nuevo usuario:"));//color
+        userTO.setPassword(leerTecla.leer("", "Ingrese la contraseña:"));//color
+        userTO.setPerfil(leerTecla.leer("", "Ingrese un perfil (VENDEDOR/ADMINISTRADOR):"));//color
         leerArch=new LeerArchivo(TABLE_USER);
         agregarContenido(leerArch, userTO);
+        System.out.println("");
     }
     
     public void listarUsuarios(){
@@ -38,25 +39,27 @@ public class UsuarioDao extends AppCrud {
             util.pintarTextHeadBody('B', 4, dataPrint); 
         }
         util.pintarLine('H', 25);
+        System.out.println("");
     }
     
     public boolean login() {    
-        String usuario=leerTecla.leer("","Usuario");
+        String usuario=leerTecla.leer("","Usuario:");//color
         Console cons=System.console();
-        System.out.println("Ingrese su clave:");
+        System.out.print("Contraseña: ");//color
         char[] clave=cons.readPassword();
+        System.out.println();
         leerArch=new LeerArchivo(TABLE_USER);
         Object[][] dataUser= buscarContenido(leerArch, 0, usuario);    
         if(dataUser!=null){
             if(String.valueOf(dataUser[0][1]).equals(String.valueOf(clave))){
                 return true;
             }else{
-                System.out.println("La contraseña es incorrecta");
+                System.out.println("La contraseña es incorrecta");//color
                 return login();
             }
         }else{
-            System.out.println("Intenete Nuevamente:");
+            System.out.println("Intenete Nuevamente:");//color
             return login();
-        }    
+        }
     }
 }

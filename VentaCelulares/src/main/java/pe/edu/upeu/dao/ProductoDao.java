@@ -22,15 +22,15 @@ public class ProductoDao extends AppCrud {
         prodTO.setIdProducto(generarId(leerArch, 0, "P", 1));
         mDao=new MarcaDao();
         mDao.mostrarMarca();
-        prodTO.setIdMarca(leerTecla.leer("", "Ingrese Id de marca"));
-        prodTO.setNombre(leerTecla.leer("", "Ingrese nombre producto"));
-        prodTO.setUnidadMed(leerTecla.leer("", "Ingrese la Unidad Med."));
-        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el precio Unit"));
-        prodTO.setCodigoIMEI(leerTecla.leer("", "Ingrese el codigo IMEI"));
-        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la Utilidad"));                        
+        prodTO.setIdMarca(leerTecla.leer("", "Ingrese el Id de la marca:"));//color
+        prodTO.setNombre(leerTecla.leer("", "Ingrese el nombre:"));
+        prodTO.setUnidadMed(leerTecla.leer("", "Ingrese la Unidad de Medida:"));
+        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el precio:"));
+        prodTO.setCodigoIMEI(leerTecla.leer("", "Ingrese el codigo IMEI:"));
+        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la Utilidad:"));//color       
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
         agregarContenido(leerArch, prodTO);
-
+        System.out.println("");
     }
 
     public void reportProducto() {
@@ -48,17 +48,17 @@ public class ProductoDao extends AppCrud {
             }
             util.pintarLine('H', 74);
         }
+        System.out.println("");
     }
     
     public void updateProducto() {        
         util.clearConsole();
         reportProducto();
-        String idProd=leerTecla.leer("", "Ingrese el Id del Producto");
+        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");//color
         prodTO=new ProductoTO();
-        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la nueva U-tilidad"));
-        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el nuevo prec. unitario"));
+        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la nueva Utilidad:"));//color
+        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el nuevo precio:"));//color
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
-
         editarRegistro(leerArch, 0, idProd, prodTO);
         util.clearConsole();
         reportProducto();
@@ -67,10 +67,9 @@ public class ProductoDao extends AppCrud {
     public void deleteProducto() {
         reportProducto();
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
-        String idProd=leerTecla.leer("", "Ingrese el Id del Producto");
+        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");//color
         eliminarRegistros(leerArch, 0, idProd);
         util.clearConsole();
         reportProducto();
     }
-
 }
