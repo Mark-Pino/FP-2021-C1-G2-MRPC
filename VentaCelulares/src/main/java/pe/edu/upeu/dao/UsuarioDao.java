@@ -18,9 +18,9 @@ public class UsuarioDao extends AppCrud {
     
     public void registrarNuevoUsuario() {    
         userTO=new UsuarioTO();
-        userTO.setUsuario(leerTecla.leer("", "Ingrese el nuevo usuario:"));//color
-        userTO.setPassword(leerTecla.leer("", "Ingrese la contraseña:"));//color
-        userTO.setPerfil(leerTecla.leer("", "Ingrese un perfil (VENDEDOR/ADMINISTRADOR):"));//color
+        userTO.setUsuario(leerTecla.leer("", "Ingrese el nuevo usuario:"));
+        userTO.setPassword(leerTecla.leer("", "Ingrese la contraseña:"));
+        userTO.setPerfil(leerTecla.leer("", "Ingrese un perfil (VENDEDOR/ADMINISTRADOR):"));
         leerArch=new LeerArchivo(TABLE_USER);
         agregarContenido(leerArch, userTO);
         System.out.println("");
@@ -43,9 +43,9 @@ public class UsuarioDao extends AppCrud {
     }
     
     public boolean login() {    
-        String usuario=leerTecla.leer("","Usuario:");//color
+        String usuario=leerTecla.leer("","Usuario:");
         Console cons=System.console();
-        System.out.print("Contraseña: ");//color
+        System.out.print("Contraseña: ");
         char[] clave=cons.readPassword();
         System.out.println();
         leerArch=new LeerArchivo(TABLE_USER);
@@ -54,11 +54,11 @@ public class UsuarioDao extends AppCrud {
             if(String.valueOf(dataUser[0][1]).equals(String.valueOf(clave))){
                 return true;
             }else{
-                System.out.println("La contraseña es incorrecta");//color
+                System.out.println("La contraseña es incorrecta");
                 return login();
             }
         }else{
-            System.out.println("Intenete Nuevamente:");//color
+            System.out.println("Intenete Nuevamente:");
             return login();
         }
     }

@@ -1,7 +1,7 @@
 package pe.edu.upeu.app;
 
 //import org.fusesource.jansi.Ansi;
-import org.fusesource.jansi.AnsiConsole;
+//import org.fusesource.jansi.AnsiConsole;
 //import org.fusesource.jansi.Ansi.Color;
 
 public class App {
@@ -25,7 +25,7 @@ public class App {
 
     public static void main( String[] args ) {
         //System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLUE + "Texto de color azul sobre fondo verde");System.out.println("Como no lo he resetado sigue igual.");System.out.println("¡Reseteo ahora!" + ANSI_RESET);System.out.println("FIN");
-        AnsiConsole.systemInstall();
+        //AnsiConsole.systemInstall();
         //Ansi color=new Ansi();
         //System.out.println(color.bgYellow().fg(Color.RED).a("Holassss"));
         //color=new Ansi();

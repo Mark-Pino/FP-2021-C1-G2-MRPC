@@ -22,12 +22,12 @@ public class ProductoDao extends AppCrud {
         prodTO.setIdProducto(generarId(leerArch, 0, "P", 1));
         mDao=new MarcaDao();
         mDao.mostrarMarca();
-        prodTO.setIdMarca(leerTecla.leer("", "Ingrese el Id de la marca:"));//color
+        prodTO.setIdMarca(leerTecla.leer("", "Ingrese el Id de la marca:"));
         prodTO.setNombre(leerTecla.leer("", "Ingrese el nombre:"));
         prodTO.setUnidadMed(leerTecla.leer("", "Ingrese la Unidad de Medida:"));
         prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el precio:"));
         prodTO.setCodigoIMEI(leerTecla.leer("", "Ingrese el codigo IMEI:"));
-        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la Utilidad:"));//color       
+        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la Utilidad:"));      
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
         agregarContenido(leerArch, prodTO);
         System.out.println("");
@@ -54,10 +54,10 @@ public class ProductoDao extends AppCrud {
     public void updateProducto() {        
         util.clearConsole();
         reportProducto();
-        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");//color
+        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");
         prodTO=new ProductoTO();
-        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la nueva Utilidad:"));//color
-        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el nuevo precio:"));//color
+        prodTO.setUtilidad(leerTecla.leer(0.0, "Ingrese la nueva Utilidad:"));
+        prodTO.setPrecioUnit(leerTecla.leer(0.0, "Ingrese el nuevo precio:"));
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
         editarRegistro(leerArch, 0, idProd, prodTO);
         util.clearConsole();
@@ -67,7 +67,7 @@ public class ProductoDao extends AppCrud {
     public void deleteProducto() {
         reportProducto();
         leerArch=new LeerArchivo(TABLE_PRODUCTO);
-        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");//color
+        String idProd=leerTecla.leer("", "Ingrese el Id del Producto:");
         eliminarRegistros(leerArch, 0, idProd);
         util.clearConsole();
         reportProducto();

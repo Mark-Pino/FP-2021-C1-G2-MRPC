@@ -29,7 +29,7 @@ public class MarcaDao extends AppCrud {
         leerArch=new LeerArchivo(TABLE_MARCA);
         marTO=new MarcaTO();
         marTO.setIdMarca(generarId(leerArch, 0, "M", 1));
-        marTO.setNombre(leerTecla.leer("", "Ingrese el nombre de la marca: "));//color
+        marTO.setNombre(leerTecla.leer("", "Ingrese el nombre de la marca:"));
         leerArch=new LeerArchivo(TABLE_MARCA);
         agregarContenido(leerArch, marTO);
         System.out.println("");

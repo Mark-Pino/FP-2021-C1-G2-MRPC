@@ -80,5 +80,4 @@ public class LeerTeclado {
         System.out.println();
         return valor;        
     }
-    
 }
